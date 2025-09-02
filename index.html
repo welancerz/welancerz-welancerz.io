@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeLancer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="icon">
+      <h2 class="logo">WeLancer</h2>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#service">SERVICE</a></li>
+        <li><a href="#design">DESIGN</a></li>
+      </ul>
+    </div>
+
+    <div class="search">
+      <button class="login" id="loginToggle">Login</button>
+      <input class="srch" type="search" placeholder="Type To Text" />
+      <button class="btn">Search</button>
+    </div>
+  </div>
+
+  <section id="home" class="section home">
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="headline">
+          <h1 class="title">WeLancer</h1>
+          <h2 class="subtitle">FINDING THE BETTER</h2>
+          <h2 class="subtitle">FOR YOU</h2>
+        </div>
+
+        <p class="par">
+          bahala na kayo <br />
+          hahhaay <br />
+          bahala naka oi
+        </p>
+
+        <button class="cn" id="joinToggle"><a href="javascript:void(0)">JOIN US</a></button>
+      </div>
+
+      <div class="form" id="loginForm">
+        <h2>Login Here</h2>
+        <input type="email" placeholder="Enter Email Here" />
+        <input type="password" placeholder="Enter Password Here" />
+        <button class="btnn">Login</button>
+
+        <p class="link">
+          Don't Have an Account? <br />
+          <a href="javascript:void(0)" id="showRegisterFromLogin">Sign up</a> Here
+        </p>
+        <p class="liw">Log in With</p>
+
+        <div class="icons">
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+        </div>
+      </div>
+
+      <div class="form" id="registerForm">
+        <h2>Register Here</h2>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Enter Email Here" />
+        <input type="password" placeholder="Enter Password Here" />
+        <input type="password" placeholder="Confirm Password" />
+        <button class="btnn">Register</button>
+
+        <p class="link">
+          Already have an account? <br />
+          <a href="javascript:void(0)" id="showLoginFromRegister">Login</a> Here
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      WeLancer is a unified digital platform designed to revolutionize the way
+      companies, freelancers, and clients connect and collaborate online...
+    </p>
+  </section>
+
+  <section id="service" class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>
+        <strong>Project Posting & Job Management:</strong> Companies and clients
+        can easily create and manage job listings or project briefs,
+        streamlining the hiring and delegation process from start to finish.
+      </li>
+      <li>
+        <strong>Talent Sourcing:</strong> Advanced algorithms help match
+        companies and clients with the most suitable freelancers based on
+        skills, experience, and past performance.
+      </li>
+      <li>
+        <strong>Freelance Opportunities:</strong> Freelancers gain access to a
+        wide range of job postings, allowing them to work flexibly, manage
+        multiple projects, and build their professional reputation.
+      </li>
+      <li>
+        <strong>Service Request System:</strong> Clients can submit specific
+        service needs, which are then matched with available professionals
+        ready to deliver quality work.
+      </li>
+      <li>
+        <strong>Secure Payment Processing:</strong> WeLancer offers a built-in,
+        secure payment gateway that ensures fast, transparent, and protected
+        financial transactions for all users.
+      </li>
+      <li>
+        <strong>Collaboration & Communication Tools:</strong> Integrated
+        messaging, file sharing, and video conferencing features support
+        seamless communication and efficient teamwork between users.
+      </li>
+      <li>
+        <strong>Workflow & Task Management:</strong> Users can track tasks,
+        deadlines, and project progress through intuitive dashboards and
+        management tools.
+      </li>
+      <li>
+        <strong>Reputation & Review System:</strong> Our built-in rating and
+        feedback system fosters trust by allowing users to review and evaluate
+        each other's performance and reliability.
+      </li>
+      <li>
+        <strong>Performance Analytics & Reporting:</strong> Real-time insights
+        and analytics help companies and freelancers monitor productivity,
+        performance, and project success metrics.
+      </li>
+    </ul>
+  </section>
+
+  <section id="design" class="section">
+    <h2>Design</h2>
+    <p>Our design philosophy blends creativity with functionality to deliver user-friendly experiences.</p>
+  </section>
+
+  <footer id="contact" class="footer">
+    <h2>Contact Us</h2>
+    <p>Email us at: wel4ncer@gmail.com</p>
+    <p>Globe: 09562700171</p>
+  </footer>
+
+  <script>
+    document.getElementById("loginToggle").addEventListener("click", function () {
+      const loginForm = document.getElementById("loginForm");
+      const registerForm = document.getElementById("registerForm");
+      if (loginForm.style.display === "block") {
+        loginForm.style.display = "none";
+      } else {
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+      }
+    });
+
+    document.getElementById("joinToggle").addEventListener("click", function () {
+      const loginForm = document.getElementById("loginForm");
+      const registerForm = document.getElementById("registerForm");
+      if (registerForm.style.display === "block") {
+        registerForm.style.display = "none";
+      } else {
+        registerForm.style.display = "block";
+        loginForm.style.display = "none";
+      }
+    });
+
+    document.getElementById("showRegisterFromLogin").addEventListener("click", function () {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("registerForm").style.display = "block";
+    });
+
+    document.getElementById("showLoginFromRegister").addEventListener("click", function () {
+      document.getElementById("registerForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "block";
+    });
+  </script>
+</body>
+</html>
